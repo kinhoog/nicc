@@ -155,6 +155,14 @@ img {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(18px);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 260ms var(--ease);
+}
+
+.step-indicator.is-visible {
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .step-indicator span {
@@ -183,6 +191,10 @@ img {
   pointer-events: none;
   transform: translateY(18px) scale(.985);
   transition: opacity 420ms var(--ease), transform 420ms var(--ease);
+}
+
+.step-hero {
+  padding: 22px 0;
 }
 
 .step.is-exiting {
@@ -1370,6 +1382,10 @@ body {
   transition: opacity 520ms var(--ease), transform 520ms var(--ease), filter 520ms var(--ease);
 }
 
+.step.step-hero {
+  padding-top: 22px;
+}
+
 .step.is-exiting {
   filter: blur(3px);
 }
@@ -1377,6 +1393,11 @@ body {
 .step-indicator {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.12));
   box-shadow: 0 10px 32px rgba(89, 9, 60, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.68);
+}
+
+.app-shell .step-indicator.is-visible {
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .step-indicator span.is-active {
@@ -1446,9 +1467,10 @@ body {
   z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 10px;
-  text-align: left;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .eyebrow,
@@ -1463,7 +1485,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 7px 10px;
+  padding: 7px 12px;
   border: 1px solid rgba(255, 255, 255, 0.58);
   border-radius: 999px;
   color: var(--deep-plum);
@@ -1471,7 +1493,8 @@ body {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.74);
   font-size: 0.68rem;
   font-weight: 950;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .live-chip::before {
@@ -1487,24 +1510,25 @@ body {
 .hero-visual {
   position: relative;
   z-index: 2;
-  width: 164px;
-  height: 164px;
-  margin: 16px auto 12px;
+  width: 208px;
+  height: 208px;
+  margin: 12px auto 18px;
   display: grid;
   place-items: center;
 }
 
 .hero-gif-frame {
-  width: 140px;
+  width: 180px;
   margin: 0;
-  padding: 6px;
-  border-radius: 32px;
+  padding: 7px;
+  border-radius: 38px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.16));
-  box-shadow: 0 22px 54px rgba(88, 5, 58, 0.25), 0 0 0 8px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 24px 58px rgba(88, 5, 58, 0.28), 0 0 0 8px rgba(255, 255, 255, 0.12);
 }
 
 .hero-gif-frame img {
-  border-radius: 26px;
+  display: block;
+  border-radius: 30px;
 }
 
 .hero-orbit {
@@ -1563,6 +1587,10 @@ h1 {
   font-size: 3rem;
   line-height: 0.9;
   text-shadow: 0 8px 26px rgba(94, 7, 66, 0.14);
+}
+
+.hero-card .primary-button {
+  margin-top: 22px;
 }
 
 h1 span:first-child {
@@ -1928,12 +1956,12 @@ h2 {
   }
 
   .hero-visual {
-    width: 176px;
-    height: 176px;
+    width: 220px;
+    height: 220px;
   }
 
   .hero-gif-frame {
-    width: 150px;
+    width: 190px;
   }
 }
 
@@ -1967,13 +1995,13 @@ h2 {
   }
 
   .hero-visual {
-    width: 152px;
-    height: 152px;
+    width: 192px;
+    height: 192px;
     margin-top: 12px;
   }
 
   .hero-gif-frame {
-    width: 128px;
+    width: 166px;
   }
 
   h1 {

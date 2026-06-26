@@ -1,5 +1,6 @@
 const steps = Array.from(document.querySelectorAll("[data-step]"));
 const dots = Array.from(document.querySelectorAll("[data-dot]"));
+const stepIndicator = document.querySelector(".step-indicator");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const state = {
@@ -89,6 +90,8 @@ function goToStep(stepName) {
     dots.forEach((dot) => {
       dot.classList.toggle("is-active", dot.dataset.dot === stepName);
     });
+
+    stepIndicator?.classList.toggle("is-visible", stepName !== "hero");
 
     state.currentStep = stepName;
     createStepSparks();
