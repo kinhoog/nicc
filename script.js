@@ -91,6 +91,7 @@ function goToStep(stepName) {
     });
 
     state.currentStep = stepName;
+    createStepSparks();
 
     if (stepName === "saudade") startSaudadeMeter();
     if (stepName === "quiz") renderQuizQuestion();
@@ -286,9 +287,9 @@ function createAmbientParticles() {
   if (reducedMotion || !ambientParticles) return;
 
   const shapes = ["''", "'♥'", "'✦'", "'•'"];
-  for (let index = 0; index < 26; index += 1) {
+  for (let index = 0; index < 34; index += 1) {
     const particle = document.createElement("span");
-    particle.className = "particle";
+    particle.className = index % 4 === 0 ? "particle sparkle" : "particle";
     particle.style.setProperty("--x", `${Math.random() * 100}%`);
     particle.style.setProperty("--y", `${Math.random() * 100}%`);
     particle.style.setProperty("--size", `${3 + Math.random() * 5}px`);
@@ -296,6 +297,22 @@ function createAmbientParticles() {
     particle.style.setProperty("--delay", `${Math.random() * -10}s`);
     particle.style.setProperty("--shape", shapes[index % shapes.length]);
     ambientParticles.append(particle);
+  }
+}
+
+function createStepSparks() {
+  if (reducedMotion || !ambientParticles) return;
+
+  for (let index = 0; index < 10; index += 1) {
+    const spark = document.createElement("span");
+    spark.className = "step-spark";
+    spark.style.setProperty("--x", `${18 + Math.random() * 64}%`);
+    spark.style.setProperty("--y", `${24 + Math.random() * 52}%`);
+    spark.style.setProperty("--size", `${4 + Math.random() * 7}px`);
+    spark.style.setProperty("--dx", `${Math.random() * 90 - 45}px`);
+    spark.style.setProperty("--dy", `${Math.random() * 90 - 58}px`);
+    ambientParticles.append(spark);
+    removeAfterAnimation(spark, 1000);
   }
 }
 
@@ -327,6 +344,9 @@ document.addEventListener("click", (event) => {
   if (!button) return;
 
   const action = button.dataset.action;
+  button.classList.add("is-pressed");
+  window.setTimeout(() => button.classList.remove("is-pressed"), 380);
+
   if (action === "start") goToStep("saudade");
   if (action === "diagnostic") goToStep("quiz");
   if (action === "showInvite") goToStep("convite");

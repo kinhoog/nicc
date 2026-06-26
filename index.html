@@ -27,10 +27,13 @@
   </head>
   <body>
     <div class="background" aria-hidden="true">
-      <span class="orb orb-one"></span>
-      <span class="orb orb-two"></span>
-      <span class="orb orb-three"></span>
+      <span class="aurora aurora-one"></span>
+      <span class="aurora aurora-two"></span>
+      <span class="aurora aurora-three"></span>
+      <span class="light-ribbon ribbon-one"></span>
+      <span class="light-ribbon ribbon-two"></span>
       <span class="grid-glow"></span>
+      <span class="grain-layer"></span>
       <div class="ambient-particles" id="ambientParticles"></div>
     </div>
 
@@ -46,12 +49,29 @@
 
       <section class="step step-hero is-active" data-step="hero" aria-labelledby="heroTitle">
         <div class="hero-card tilt-card">
-          <div class="eyebrow">versão 1.0 — aprovado pelo coração do sistema</div>
-          <div class="hero-gif-frame" aria-hidden="true">
-            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExajltZDdmaWUya2ZqaWg5cTJmYm5mMzZhbGNndGZscTN4d2c0MWRnOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif" alt="" decoding="async">
+          <span class="card-light card-light-one" aria-hidden="true"></span>
+          <span class="card-light card-light-two" aria-hidden="true"></span>
+          <div class="hero-topbar">
+            <div class="eyebrow">versão 1.0 — aprovado pelo coração do sistema</div>
+            <span class="live-chip">online</span>
           </div>
-          <h1 id="heroTitle">Protocolo Saudade da Nic</h1>
+          <div class="hero-visual">
+            <div class="hero-gif-frame" aria-hidden="true">
+              <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExajltZDdmaWUya2ZqaWg5cTJmYm5mMzZhbGNndGZscTN4d2c0MWRnOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif" alt="" decoding="async">
+            </div>
+            <div class="hero-orbit hero-orbit-one"></div>
+            <div class="hero-orbit hero-orbit-two"></div>
+            <span class="spark-mark spark-a">♥</span>
+            <span class="spark-mark spark-b">✦</span>
+            <span class="spark-mark spark-c">✧</span>
+          </div>
+          <h1 id="heroTitle"><span>Protocolo</span><span>Saudade da Nic</span></h1>
           <p class="hero-copy">um sistema altamente científico, nada suspeito, criado para resolver uma emergência afetiva.</p>
+          <div class="hero-metrics" aria-label="sinais do protocolo">
+            <span>fofura 100%</span>
+            <span>brilho alto</span>
+            <span>risco: date</span>
+          </div>
           <button class="primary-button" type="button" data-action="start">
             <span>iniciar protocolo</span>
           </button>
@@ -60,6 +80,7 @@
 
       <section class="step" data-step="saudade" aria-labelledby="saudadeTitle">
         <div class="glass-panel meter-panel tilt-card">
+          <span class="panel-sheen" aria-hidden="true"></span>
           <p class="section-kicker">módulo de análise</p>
           <h2 id="saudadeTitle">analisando nível de saudade...</h2>
 
@@ -106,6 +127,7 @@
 
       <section class="step" data-step="quiz" aria-labelledby="quizTitle">
         <div class="glass-panel quiz-panel tilt-card">
+          <span class="panel-sheen" aria-hidden="true"></span>
           <div class="quiz-topline">
             <p class="section-kicker">diagnóstico fofo</p>
             <span id="quizProgress">1/4</span>
@@ -120,6 +142,7 @@
 
       <section class="step" data-step="resultado" aria-labelledby="resultTitle">
         <div class="glass-panel result-panel tilt-card">
+          <span class="panel-sheen" aria-hidden="true"></span>
           <p class="section-kicker">resultado do sistema</p>
           <h2 id="resultTitle">calculando compatibilidade...</h2>
           <div class="loader-ring" aria-hidden="true"></div>
@@ -128,6 +151,7 @@
             <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjh1MDRhbHlrb2RjbnY4bTBqdWdyMmY4NWV1OG8wejYzZmpzZmZuNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1JmGiBtqTuehfYxuy9/giphy.gif" alt="" loading="lazy" decoding="async">
           </div>
           <div class="compatibility-result" id="compatibilityResult" hidden>
+            <span class="success-seal">100%</span>
             <strong>compatibilidade detectada: 100%</strong>
             <p>diagnóstico: date recomendado.</p>
             <small>análise técnica: a nic é muito linda.</small>
@@ -141,6 +165,8 @@
       <section class="step" data-step="convite" aria-labelledby="inviteTitle">
         <div class="ticket-wrap">
           <div class="ticket-card tilt-card">
+            <span class="ticket-glow ticket-glow-one" aria-hidden="true"></span>
+            <span class="ticket-glow ticket-glow-two" aria-hidden="true"></span>
             <div class="ticket-shine" aria-hidden="true"></div>
             <div class="ticket-header">
               <p class="section-kicker">convite liberado</p>
@@ -194,6 +220,7 @@
       <section class="step final-step" data-step="final" aria-labelledby="finalTitle">
         <div class="celebration-layer" id="celebrationLayer" aria-hidden="true"></div>
         <div class="final-sheet">
+          <span class="final-burst" aria-hidden="true"></span>
           <p class="section-kicker">protocolo concluído com sucesso.</p>
           <h2 id="finalTitle">AEEEEEEEEEEEEEEEEEEEEEEEEE</h2>
           <p>date desbloqueado com sucesso.<br>agora só falta escolher o dia.</p>
