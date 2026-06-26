@@ -615,6 +615,14 @@ h2 {
   animation: rotateShine 1.4s linear infinite;
 }
 
+.loader-ring[hidden] {
+  display: none;
+}
+
+.loader-ring.is-complete {
+  animation: none;
+}
+
 .system-lines {
   display: grid;
   gap: 9px;
