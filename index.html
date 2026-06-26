@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#ff6aa8">
+    <title>Protocolo Saudade da Nic</title>
+    <meta name="description" content="um mini site fofo para desbloquear um date com a nic.">
+    <link rel="canonical" href="https://kinhoog.github.io/nicc/">
+    <link rel="icon" href="assets/icon.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="assets/icon.jpg">
+
+    <meta property="og:title" content="Protocolo Saudade da Nic">
+    <meta property="og:description" content="um mini site fofo para desbloquear um date com a nic.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kinhoog.github.io/nicc/">
+    <meta property="og:image" content="https://kinhoog.github.io/nicc/assets/icon.jpg">
+    <meta property="og:image:secure_url" content="https://kinhoog.github.io/nicc/assets/icon.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Preview rosa e brilhante do Protocolo Saudade da Nic">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Protocolo Saudade da Nic">
+    <meta name="twitter:description" content="um mini site fofo para desbloquear um date com a nic.">
+    <meta name="twitter:image" content="https://kinhoog.github.io/nicc/assets/icon.jpg">
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="background" aria-hidden="true">
+      <span class="orb orb-one"></span>
+      <span class="orb orb-two"></span>
+      <span class="orb orb-three"></span>
+      <span class="grid-glow"></span>
+      <div class="ambient-particles" id="ambientParticles"></div>
+    </div>
+
+    <main class="app-shell" aria-live="polite">
+      <div class="step-indicator" aria-hidden="true">
+        <span data-dot="hero" class="is-active"></span>
+        <span data-dot="saudade"></span>
+        <span data-dot="quiz"></span>
+        <span data-dot="resultado"></span>
+        <span data-dot="convite"></span>
+        <span data-dot="final"></span>
+      </div>
+
+      <section class="step step-hero is-active" data-step="hero" aria-labelledby="heroTitle">
+        <div class="hero-card tilt-card">
+          <div class="eyebrow">versão 1.0 — aprovado pelo coração do sistema</div>
+          <div class="hero-gif-frame" aria-hidden="true">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExemFrODBhNzJ5ajljZGNhMzUwZzVxcXdkdGk2eHd4YnM2eWE1d3k3NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qUIm5wu6LAAog/giphy.gif" alt="">
+          </div>
+          <h1 id="heroTitle">Protocolo Saudade da Nic</h1>
+          <p class="hero-copy">um sistema altamente científico, nada suspeito, criado para resolver uma emergência afetiva.</p>
+          <button class="primary-button" type="button" data-action="start">
+            <span>iniciar protocolo</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="step" data-step="saudade" aria-labelledby="saudadeTitle">
+        <div class="glass-panel meter-panel tilt-card">
+          <p class="section-kicker">módulo de análise</p>
+          <h2 id="saudadeTitle">analisando nível de saudade...</h2>
+
+          <div class="meter-orbit" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="meter-readout">
+            <strong id="meterPercent">0%</strong>
+            <span id="meterMessage" aria-live="polite">tudo normal</span>
+          </div>
+
+          <div class="progress-shell" role="progressbar" aria-label="nível de saudade" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="meterProgress">
+            <div class="progress-fill" id="meterFill"></div>
+          </div>
+
+          <div class="meter-result" id="meterResult" hidden>
+            <p><strong>resultado:</strong> saudade em nível máximo.</p>
+            <p><strong>solução recomendada:</strong> ver a nic o quanto antes.</p>
+          </div>
+
+          <div class="status-grid" aria-label="status do protocolo">
+            <article>
+              <span>saudade</span>
+              <strong>100%</strong>
+            </article>
+            <article>
+              <span>chance de querer ver a nic</span>
+              <strong>100%</strong>
+            </article>
+            <article>
+              <span>recomendação</span>
+              <strong>datezinho</strong>
+            </article>
+          </div>
+
+          <button class="primary-button" type="button" data-action="diagnostic" disabled>
+            <span>iniciar diagnóstico</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="step" data-step="quiz" aria-labelledby="quizTitle">
+        <div class="glass-panel quiz-panel tilt-card">
+          <div class="quiz-topline">
+            <p class="section-kicker">diagnóstico fofo</p>
+            <span id="quizProgress">1/4</span>
+          </div>
+          <h2 id="quizTitle">pergunta confidencial</h2>
+          <div class="quiz-card" id="quizCard">
+            <p class="quiz-question" id="quizQuestion"></p>
+            <div class="answers" id="answers"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="step" data-step="resultado" aria-labelledby="resultTitle">
+        <div class="glass-panel result-panel tilt-card">
+          <p class="section-kicker">resultado do sistema</p>
+          <h2 id="resultTitle">calculando compatibilidade...</h2>
+          <div class="loader-ring" aria-hidden="true"></div>
+          <div class="system-lines" id="systemLines" aria-live="polite"></div>
+          <div class="compatibility-result" id="compatibilityResult" hidden>
+            <strong>compatibilidade detectada: 100%</strong>
+            <p>diagnóstico: date recomendado.</p>
+            <small>análise técnica: a nic é muito linda.</small>
+          </div>
+          <button class="primary-button" type="button" data-action="showInvite" hidden>
+            <span>ver convite oficial</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="step" data-step="convite" aria-labelledby="inviteTitle">
+        <div class="ticket-wrap">
+          <div class="ticket-card tilt-card">
+            <div class="ticket-shine" aria-hidden="true"></div>
+            <div class="ticket-header">
+              <p class="section-kicker">convite liberado</p>
+              <span class="approved-stamp">APROVADO</span>
+            </div>
+            <h2 id="inviteTitle">INGRESSO VIP</h2>
+
+            <dl class="ticket-details">
+              <div>
+                <dt>evento</dt>
+                <dd>date com o erick</dd>
+              </div>
+              <div>
+                <dt>convidada especial</dt>
+                <dd>nic</dd>
+              </div>
+              <div>
+                <dt>entrada</dt>
+                <dd>um sorriso</dd>
+              </div>
+              <div>
+                <dt>benefício</dt>
+                <dd>risadas, conversa boa e zero pressão</dd>
+              </div>
+              <div>
+                <dt>status</dt>
+                <dd>convite oficialmente liberado</dd>
+              </div>
+              <div>
+                <dt>validade</dt>
+                <dd>quando a nic quiser</dd>
+              </div>
+            </dl>
+
+            <div class="ticket-code" aria-label="código decorativo">NIC-DATE-100</div>
+          </div>
+
+          <p class="soft-message" id="softMessage" hidden>tudo bem, o convite fica salvo no coração do sistema.</p>
+
+          <div class="invite-actions">
+            <button class="primary-button" type="button" data-action="acceptInvite">
+              <span>aceitar convite</span>
+            </button>
+            <button class="ghost-button" type="button" data-action="softMaybe">
+              pensar com carinho
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="step final-step" data-step="final" aria-labelledby="finalTitle">
+        <div class="celebration-layer" id="celebrationLayer" aria-hidden="true"></div>
+        <div class="final-sheet">
+          <p class="section-kicker">protocolo concluído com sucesso.</p>
+          <h2 id="finalTitle">AEEEEEEEEEEEEEEEEEEEEEEEEE</h2>
+          <p>date desbloqueado com sucesso.<br>agora só falta escolher o dia.</p>
+          <div class="final-gif">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWFrY3dtZm9jMTJnZzZnZzdzZjVoOXJkNDBvbWc1OW1pYzlmN3dlNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oiqxP4fuZkuQIJj9Jp/giphy.gif" alt="Comemoração animada">
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <audio id="dateAudio" src="assets/do-do-do.mp3" preload="none"></audio>
+    <script src="script.js" defer></script>
+  </body>
+</html>
