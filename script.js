@@ -57,6 +57,7 @@ const quizCard = document.querySelector("#quizCard");
 const resultTitle = document.querySelector("#resultTitle");
 const loaderRing = document.querySelector(".loader-ring");
 const systemLines = document.querySelector("#systemLines");
+const resultGifFrame = document.querySelector("#resultGifFrame");
 const compatibilityResult = document.querySelector("#compatibilityResult");
 const showInviteButton = document.querySelector("[data-action='showInvite']");
 const softMessage = document.querySelector("#softMessage");
@@ -180,6 +181,8 @@ function showCompatibilityResult() {
   resultTitle.textContent = "calculando compatibilidade...";
   loaderRing.hidden = false;
   loaderRing.classList.remove("is-complete");
+  resultGifFrame.hidden = true;
+  systemLines.hidden = false;
   systemLines.replaceChildren();
   compatibilityResult.hidden = true;
   showInviteButton.hidden = true;
@@ -197,6 +200,8 @@ function showCompatibilityResult() {
     resultTitle.textContent = "diagnóstico concluído.";
     loaderRing.classList.add("is-complete");
     loaderRing.hidden = true;
+    systemLines.hidden = true;
+    resultGifFrame.hidden = false;
     compatibilityResult.hidden = false;
     showInviteButton.hidden = false;
   }, reducedMotion ? 160 : 2050);

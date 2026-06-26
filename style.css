@@ -629,6 +629,10 @@ h2 {
   min-height: 116px;
 }
 
+.system-lines[hidden] {
+  display: none;
+}
+
 .system-line {
   margin: 0;
   padding: 11px 12px;
@@ -638,6 +642,29 @@ h2 {
   font-size: 0.92rem;
   font-weight: 830;
   animation: lineIn 320ms var(--ease) both;
+}
+
+.result-gif-frame {
+  overflow: hidden;
+  width: min(38vw, 138px);
+  margin: 14px auto 10px;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 16px 34px rgba(166, 31, 101, 0.2);
+  animation: gentleFloat 4.8s ease-in-out infinite;
+}
+
+.result-gif-frame[hidden] {
+  display: none;
+}
+
+.result-gif-frame img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
+  object-fit: cover;
 }
 
 .compatibility-result {
